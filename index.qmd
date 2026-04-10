@@ -1,4 +1,10 @@
-# Preface {.unnumbered}
+---
+title: "Prefácio"
+toc: false
+page-layout: full
+---
+
+## Sobre {.unnumbered}
 
 This is a Quarto book.
 
@@ -9,9 +15,15 @@ To learn more about Quarto books visit <https://quarto.org/docs/books>.
 
 ```
 
+
 ```{=latex}
-\vect{algo}
+$\mathbf{algo}$
 \text{oi}
+$\mathbf{DU}^T \mathbf{D}$
 ```
 
-$\vect{DU}^T \vect{D}$
+
+# Licença
+
+CCBY
+

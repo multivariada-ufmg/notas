@@ -1,4 +1,10 @@
-# Introduction
+---
+title: "Análise de Componentes"
+toc: false
+page-layout: full
+---
+
+## Teorema da decomposição espectral
 
 This is a book created from markdown and executable code.
 

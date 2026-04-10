@@ -2,9 +2,12 @@ project:
   type: book
   output-dir: docs
 
+lang: pt-BR
+
 book:
-  title: "notas"
-  author: "Norah Jones"
+  title: "Estatística Multivariada"
+  subtitle: "Notas de aula de um curso"
+  author: "Carlos de Moura"
   date: "3/26/2026"
   chapters:
     - index.qmd
