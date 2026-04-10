@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: docs
 
 book:
   title: "notas"
@@ -7,19 +8,19 @@ book:
   date: "3/26/2026"
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+    - qmd/introducao.qmd
+    - qmd/pca.qmd
+    - qmd/referencias.qmd
 
-bibliography: references.bib
+bibliography: qmd/references.bib
 
 format:
   html:
     theme:
       - cosmo
       - brand
+    include-in-header: mathjax-macros.js
   pdf:
     documentclass: scrreprt
-
-
+    include-in-header: header.tex
 

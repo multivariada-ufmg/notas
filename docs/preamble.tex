@@ -1,0 +1,26 @@
+% preamble.tex — define os comandos usados no .qmd
+
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{bm}
+
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+
+% \destaque{texto} — destaca trecho em amarelo
+\newcommand{\destaque}[1]{%
+  \colorbox{yellow!40}{\textcolor{brown}{#1}}%
+}
+
+% ambiente caixaaviso
+\newenvironment{caixaaviso}{%
+  \begin{mdframed}[
+    linecolor=orange,
+    linewidth=2pt,
+    leftmargin=0pt,
+    innerleftmargin=8pt,
+    backgroundcolor=orange!10
+  ]
+}{%
+  \end{mdframed}
+}

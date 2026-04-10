@@ -1,0 +1,143 @@
+% version 2026-03-26
+
+%%%%% Packages %%%%%
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+
+\usepackage{cancel}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{bbm}
+
+\usepackage{etoolbox}
+\usepackage{xparse}
+\usepackage{bm}
+
+%%%%% Statistics %%%%%
+
+\NewDocumentCommand\statsMask{ s m m O{} }{
+  \IfBooleanTF{#1}%
+  {\def\open{(} \def\close{)}}%
+  {\def\open{[} \def\close{]}}%
+  \mathsf{#2}%
+  \expandafter\left\open%
+  #3
+  \ifstrempty{#4}%
+  {}%
+  {\tab[.08] \middle| \tab[.08] #4}%
+  \expandafter\right\close
+}
+
+\NewDocumentCommand{\Prob}{ s m O{} }{
+  \def\sym{P}
+  \IfBooleanTF{#1}{\statsMask*{\sym}{#2}[#3]}{\statsMask{\sym}{#2}[#3]}
+}
+\NewDocumentCommand{\E}{ s m O{} }{
+  \def\sym{E}
+  \IfBooleanTF{#1}{\statsMask*{\sym}{#2}[#3]}{\statsMask{\sym}{#2}[#3]}
+}
+\NewDocumentCommand{\Var}{ s m O{} }{
+  \def\sym{Var}
+  \IfBooleanTF{#1}{\statsMask*{\sym}{#2}[#3]}{\statsMask{\sym}{#2}[#3]}
+}
+\NewDocumentCommand{\Cov}{ s m O{} }{
+  \def\sym{Cov}
+  \IfBooleanTF{#1}{\statsMask*{\sym}{#2}[#3]}{\statsMask{\sym}{#2}[#3]}
+}
+\NewDocumentCommand{\Corr}{ s m O{} }{
+  \def\sym{Corr}
+  \IfBooleanTF{#1}{\statsMask*{\sym}{#2}[#3]}{\statsMask{\sym}{#2}[#3]}
+}
+\NewDocumentCommand{\Bias}{ s m O{} }{
+  \def\sym{Bias}
+  \IfBooleanTF{#1}{\statsMask*{\sym}{#2}[#3]}{\statsMask{\sym}{#2}[#3]}
+}
+\NewDocumentCommand{\MSE}{ s m O{} }{
+  \def\sym{MSE}
+  \IfBooleanTF{#1}{\statsMask*{\sym}{#2}[#3]}{\statsMask{\sym}{#2}[#3]}
+}
+\NewDocumentCommand{\Vies}{ s m O{} }{
+  \def\sym{Vies}
+  \IfBooleanTF{#1}{\statsMask*{\sym}{#2}[#3]}{\statsMask{\sym}{#2}[#3]}
+}
+\NewDocumentCommand{\EQM}{ s m O{} }{
+  \def\sym{EQM}
+  \IfBooleanTF{#1}{\statsMask*{\sym}{#2}[#3]}{\statsMask{\sym}{#2}[#3]}
+}
+
+
+%%%%% Derivative %%%%%
+
+\NewDocumentCommand\derivative{s O{} m m m}{%
+  \def\n{#2}
+  \def\var{#3}
+  \def\fun{#4}
+  \def\sym{#5}
+  \IfBooleanTF{#1}%
+  {\frac{\sym^{\n}\ \fun}{\sym \var^{\n}}}%
+  {\frac{\sym^{\n}}{\sym \var^{\n}} \fun}%
+}
+
+\NewDocumentCommand\del{s O{} m m}{%
+  \IfBooleanTF{#1}%
+  {\derivative*[#2]{#3}{#4}{\partial}}%
+  {\derivative[#2]{#3}{#4}{\partial}} %
+}
+
+\NewDocumentCommand\der{s O{} m m}{
+  \IfBooleanTF{#1}%
+  {\derivative*[#2]{#3}{#4}{d}}%
+  {\derivative[#2]{#3}{#4}{d}} %
+}
+
+
+%%%%% Symbols %%%%%
+
+\newcommand\ball[1][.6]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+\NewDocumentCommand\coor{ s m m }{%
+  \ifstrempty{#2}{\def\row{\ball}}{\def\row{#2}}
+  \ifstrempty{#3}{\def\col{\ball}}{\def\col{#3}}
+  \IfBooleanTF{#1}%
+  {\row,\col}%
+  {(\row,\col)}%
+}
+
+\newcommand{\QED}{\hfill \rule{0.2cm}{0.2cm}}
+
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+
+\NewDocumentCommand\indica{O{} m}{\tab[.1] \boldsymbol{\mathbbm{1}}_{#1}\!\left( #2 \right)}
+
+\newcommand{\indep}{\perp\!\!\!\!\perp}
+
+\newcommand{\toprove}{
+\begin{tikzpicture}[scale=1.5, baseline={([yshift=-.8ex]current bounding box.center)}]%
+\draw (0,0) node[anchor=center] {.};
+\draw (0,.12) node[anchor=center] {.};
+\draw (-.06,-.04) -- (-.06,.15) ;
+\draw (-.06,.06) -- (0.06,.06) ;
+\end{tikzpicture}
+\tab[.1]
+}
+
+
+%%%%% Rewrite %%%%%
+
+\let\oldcancel\cancel
+\renewcommand\cancel[2][black]{\renewcommand\CancelColor{\color{#1}}\oldcancel{#2}}
+
+\let\oldexists\exists
+\renewcommand{\exists}{\oldexists\tab[.15]}
+
+\let\oldforall\forall
+\renewcommand{\forall}{\tab[.25]\oldforall\tab[.1]}
+
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\vb}[1]{\vect{#1}}
+
+\newcommand\tab[1][1]{\hspace*{#1cm}}
+
+\newenvironment{style}{}{}
