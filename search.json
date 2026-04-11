@@ -2,41 +2,61 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "notas",
+    "title": "Estatística Multivariada",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
+    "text": "Sobre\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n1 + 1\n\n[1] 2",
     "crumbs": [
-      "Preface"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Prefácio</span>"
     ]
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
+    "objectID": "qmd/introducao.html",
+    "href": "qmd/introducao.html",
+    "title": "2  Introdução",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "2.1 Definições básicas\nSobre o capítulo.\nSeja X",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introdução</span>"
     ]
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "objectID": "qmd/introducao.html#medidas-de-variabilidade",
+    "href": "qmd/introducao.html#medidas-de-variabilidade",
+    "title": "2  Introdução",
+    "section": "2.2 Medidas de variabilidade",
+    "text": "2.2 Medidas de variabilidade\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming”. Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introdução</span>"
     ]
   },
   {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
+    "objectID": "qmd/pca.html",
+    "href": "qmd/pca.html",
+    "title": "3  Análise de Componentes",
+    "section": "",
+    "text": "3.1 Teorema da decomposição espectral\nThis is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Análise de Componentes</span>"
+    ]
+  },
+  {
+    "objectID": "qmd/pca.html#teorema-da-decomposição-espectral",
+    "href": "qmd/pca.html#teorema-da-decomposição-espectral",
+    "title": "3  Análise de Componentes",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming”. Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Análise de Componentes</span>"
+    ]
+  },
+  {
+    "objectID": "qmd/referencias.html",
+    "href": "qmd/referencias.html",
+    "title": "Referêcias",
     "section": "",
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
     "crumbs": [
-      "References"
+      "Referêcias"
     ]
   }
 ]
